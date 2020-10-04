@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Calculator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" type="text/css" href="/index.css"> -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=David+Libre&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: #e97171;
+            overflow-x: hidden;
+        }
+        
+        .box {
+            background-color: #f4f4f4;
+            margin-top: 20%;
+            margin-bottom: 21%;
+            padding: 2em;
+            height: 100%;
+            width: 100%;
+            border-radius: 1em;
+            box-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.4), 0px 18px 23px rgba(0, 0, 0, 0.4);
+        }
+        
+        .display-4 {
+            padding: 40px;
+        }
+        
+        #footer-text {
+            margin-top: 2em;
+        }
+        
+        #footer {
+            background: #212121;
+            color: wheat;
+            text-align: center;
+            padding: 2em;
+        }
+        
+        .Logo {
+            margin-left: 38%;
+        }
+        
+        .bottom-link {
+            color: wheat;
+        }
+        
+        .bottom-link:hover {
+            text-decoration: none;
+            color: #e3fdfd;
+        }
+        
+        .fab {
+            padding-left: 20px;
+            padding-right: 30px;
+            color: beige;
+        }
+        
+        .nav-link {
+            color: white !important;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 100;
+            padding-left: 1rem;
+            letter-spacing: 0.5em;
+            margin-right: 2em;
+        }
+        
+        .navbar {
+            background: #1a1a2e !important;
+        }
+        
+        .navbar.scrolled {
+            background-color: rgba(0, 0, 0, 0.2);
+            transition: background 5000ms;
+        }
+        
+        @media (max-width: 450px) {
+            .display-4 {
+                font-size: 2em !important;
+            }
+        }
+        
+        @media (max-width: 280px) {
+            .box {
+                margin-bottom: 28%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md fixed-top" id="main">
+
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a href="mailto:ripuararia@gmail.com" class="nav-link">RipuDaman</a>
+            </li>
+        </ul>
+
+    </nav>
+    <form action="/" method="POST">
+        <div class="container">
+            <div class="box">
+                <div class="display-4">Calulator BMI</div>
+                <div class="form-group"> <label class="form-control-label text-muted">Height</label> <input type="text" id="height" name="height" placeholder="Height" class="form-control"> </div>
+                <div class="form-group"> <label class="form-control-label text-muted">weight</label> <input type="text" id="weight" name="weight" placeholder="weight" class="form-control"> </div>
+
+                <button type="submit" class="btn btn-lg btn-primary" name="submit">Calculate BMI</button>
+            </div>
+        </div>
+    </form>
+    <footer id="footer">
+        <a href="https://www.instagram.com/4742ripu/?hl=en" class="icon-links" style="text-decoration: none;"><i class="fab fa-instagram"></i></a>
+        <a href="https://github.com/ripu2" class="icon-links" style="text-decoration: none;"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/ripu-daman-88a609159/" class="icon-links" style="text-decoration: none;"><i class="fab fa-linkedin"></i></a>
+        <a href="mailto:ripuararia@gmail.com" class="fab" style="text-decoration: none;"> <i class="fas fa-envelope-open"></i></a>
+        <p id="footer-text">© 2020-All rights reserved. Made with ❤️ by<a href="https://www.linkedin.com/in/ripu-daman-88a609159/" class="bottom-link"><strong> Ripu</strong> </a> </p>
+    </footer>
+    <script src="https://kit.fontawesome.com/94d26e8b6b.js" crossorigin="anonymous"></script>
+    <script src="" async defer></script>
+    <script>
+        $(function() {
+            $(document).scroll(function() {
+                var $nav = $("#main");
+                $nav.toggleClass("scrolled", $(this).scrollTop() > $nav.height());
+            });
+        });
+    </script>
+    <script src="https://kit.fontawesome.com/94d26e8b6b.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</body>
+
+</html>
